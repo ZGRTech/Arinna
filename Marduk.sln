@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marduk.Data", "Marduk.Data\Marduk.Data.csproj", "{5297A9E6-EE83-477F-9D6F-451141D18406}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marduk.Data.Model", "Marduk.Data.Model\Marduk.Data.Model.csproj", "{13DA4D0A-47F4-4B21-8EED-B9768E63AD0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marduk.Test.Model", "Marduk.Test.Model\Marduk.Test.Model.csproj", "{58006462-D8BE-469C-9EB1-CE2A2257349D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3F182C4B-8404-44A1-80A2-58B39BC8EB55}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{C9F51B9D-8471-4B7A-B234-EDBEBC9E4CE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marduk.Test.Service", "Marduk.Test.Service\Marduk.Test.Service.csproj", "{4A869A66-1CC4-42C3-8475-F6C11EB86FA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marduk.Test.Data", "Marduk.Test.Data\Marduk.Test.Data.csproj", "{38B9F26E-C48F-4438-A257-27EAA44A20D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marduk.Test", "Marduk.Test\Marduk.Test.csproj", "{A15B4454-2D4B-40FF-A0F5-0D8A6DDCDCAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5297A9E6-EE83-477F-9D6F-451141D18406}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5297A9E6-EE83-477F-9D6F-451141D18406}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5297A9E6-EE83-477F-9D6F-451141D18406}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5297A9E6-EE83-477F-9D6F-451141D18406}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13DA4D0A-47F4-4B21-8EED-B9768E63AD0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13DA4D0A-47F4-4B21-8EED-B9768E63AD0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13DA4D0A-47F4-4B21-8EED-B9768E63AD0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13DA4D0A-47F4-4B21-8EED-B9768E63AD0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58006462-D8BE-469C-9EB1-CE2A2257349D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58006462-D8BE-469C-9EB1-CE2A2257349D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58006462-D8BE-469C-9EB1-CE2A2257349D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58006462-D8BE-469C-9EB1-CE2A2257349D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A869A66-1CC4-42C3-8475-F6C11EB86FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A869A66-1CC4-42C3-8475-F6C11EB86FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A869A66-1CC4-42C3-8475-F6C11EB86FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A869A66-1CC4-42C3-8475-F6C11EB86FA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38B9F26E-C48F-4438-A257-27EAA44A20D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38B9F26E-C48F-4438-A257-27EAA44A20D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38B9F26E-C48F-4438-A257-27EAA44A20D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38B9F26E-C48F-4438-A257-27EAA44A20D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A15B4454-2D4B-40FF-A0F5-0D8A6DDCDCAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A15B4454-2D4B-40FF-A0F5-0D8A6DDCDCAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A15B4454-2D4B-40FF-A0F5-0D8A6DDCDCAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A15B4454-2D4B-40FF-A0F5-0D8A6DDCDCAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5297A9E6-EE83-477F-9D6F-451141D18406} = {3F182C4B-8404-44A1-80A2-58B39BC8EB55}
+		{13DA4D0A-47F4-4B21-8EED-B9768E63AD0C} = {3F182C4B-8404-44A1-80A2-58B39BC8EB55}
+		{58006462-D8BE-469C-9EB1-CE2A2257349D} = {C9F51B9D-8471-4B7A-B234-EDBEBC9E4CE4}
+		{4A869A66-1CC4-42C3-8475-F6C11EB86FA0} = {C9F51B9D-8471-4B7A-B234-EDBEBC9E4CE4}
+		{38B9F26E-C48F-4438-A257-27EAA44A20D6} = {C9F51B9D-8471-4B7A-B234-EDBEBC9E4CE4}
+		{A15B4454-2D4B-40FF-A0F5-0D8A6DDCDCAD} = {C9F51B9D-8471-4B7A-B234-EDBEBC9E4CE4}
+	EndGlobalSection
+EndGlobal
