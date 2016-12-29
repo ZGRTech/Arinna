@@ -209,14 +209,14 @@ namespace Arinna.Data.Repositories
         }
 
 
-        public async void ExecuteSqlCommandAsync(string sql, params object[] parameters)
+        public async Task ExecuteSqlCommandAsync(string sql, params object[] parameters)
         {
             await Context.Database.ExecuteSqlCommandAsync(sql, parameters);
         }
 
-        public async void ExecuteSqlCommandAsync(IDbCommand sqlCommand)
+        public async Task ExecuteSqlCommandAsync(IDbCommand sqlCommand)
         {
-            var ret = await (sqlCommand.Parameters.Count == 0 ? Context.Database.ExecuteSqlCommandAsync(sqlCommand.CommandText) : Context.Database.ExecuteSqlCommandAsync(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters)));
+            await (sqlCommand.Parameters.Count == 0 ? Context.Database.ExecuteSqlCommandAsync(sqlCommand.CommandText) : Context.Database.ExecuteSqlCommandAsync(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters)));
         }
 
         public async Task<IEnumerable<TEntity>> ExecuteSqlQueryAsync(string sql, params object[] parameters)
@@ -226,7 +226,7 @@ namespace Arinna.Data.Repositories
 
         public async Task<IEnumerable<TEntity>> ExecuteSqlQueryAsync(IDbCommand sqlCommand)
         {
-            return await (sqlCommand.Parameters.Count == 0 ? Context.Database.SqlQuery<TEntity>(sqlCommand.CommandText).ToListAsync() : Context.Database.SqlQuery<TEntity>(sqlCommand.CommandText, sqlCommand.Parameters).ToListAsync());
+            return await (sqlCommand.Parameters.Count == 0 ? Context.Database.SqlQuery<TEntity>(sqlCommand.CommandText).ToListAsync() : Context.Database.SqlQuery<TEntity>(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters)).ToListAsync());
         }
 
         public async Task<IEnumerable<TDtoEntity>> ExecuteSqlQueryAsync<TDtoEntity>(string sql, params object[] parameters) where TDtoEntity : class
@@ -236,7 +236,7 @@ namespace Arinna.Data.Repositories
 
         public async Task<IEnumerable<TDtoEntity>> ExecuteSqlQueryAsync<TDtoEntity>(IDbCommand sqlCommand) where TDtoEntity : class
         {
-            return await (sqlCommand.Parameters.Count == 0 ? Context.Database.SqlQuery<TDtoEntity>(sqlCommand.CommandText).ToListAsync() : Context.Database.SqlQuery<TDtoEntity>(sqlCommand.CommandText, sqlCommand.Parameters).ToListAsync());
+            return await (sqlCommand.Parameters.Count == 0 ? Context.Database.SqlQuery<TDtoEntity>(sqlCommand.CommandText).ToListAsync() : Context.Database.SqlQuery<TDtoEntity>(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters)).ToListAsync());
         }
 
 

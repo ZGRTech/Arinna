@@ -59,8 +59,8 @@ namespace Arinna.Data.Interfaces
         IEnumerable<TDtoEntity> ExecuteSqlQuery<TDtoEntity>(string sql,params object[] parameters) where TDtoEntity : class;
         IEnumerable<TDtoEntity> ExecuteSqlQuery<TDtoEntity>(IDbCommand sqlCommand) where TDtoEntity : class;
 
-        void ExecuteSqlCommandAsync(string sql,params object[] parameters);
-        void ExecuteSqlCommandAsync(IDbCommand sqlCommand);
+        Task ExecuteSqlCommandAsync(string sql,params object[] parameters);
+        Task ExecuteSqlCommandAsync(IDbCommand sqlCommand);
 
         Task<IEnumerable<TEntity>> ExecuteSqlQueryAsync(string sql,params object[] parameters);
         Task<IEnumerable<TEntity>> ExecuteSqlQueryAsync(IDbCommand sqlCommand);

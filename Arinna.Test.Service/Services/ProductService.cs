@@ -373,7 +373,8 @@ namespace Arinna.Test.Service.Services
         {
             using (var uof = new UnitOfWork(new ArinnaTestContext()))
             {
-                uof.GetRepository<Product>().ExecuteSqlCommandAsync(sql, parameters);
+                var task = uof.GetRepository<Product>().ExecuteSqlCommandAsync(sql, parameters);
+                task.Wait();
             }
         }
 
@@ -381,7 +382,8 @@ namespace Arinna.Test.Service.Services
         {
             using (var uof = new UnitOfWork(new ArinnaTestContext()))
             {
-                uof.GetRepository<Product>().ExecuteSqlCommandAsync(sqlCommand);
+                var task = uof.GetRepository<Product>().ExecuteSqlCommandAsync(sqlCommand);
+                task.Wait();
             }
         }
 
