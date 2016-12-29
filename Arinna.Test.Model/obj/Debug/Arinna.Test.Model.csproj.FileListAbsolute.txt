@@ -1,0 +1,14 @@
+C:\Users\ozgur\Desktop\Marduk\Marduk.Test.Model\bin\Debug\Marduk.Test.Model.dll
+C:\Users\ozgur\Desktop\Marduk\Marduk.Test.Model\bin\Debug\Marduk.Test.Model.pdb
+C:\Users\ozgur\Desktop\Marduk\Marduk.Test.Model\bin\Debug\Marduk.Data.Model.dll
+C:\Users\ozgur\Desktop\Marduk\Marduk.Test.Model\bin\Debug\Marduk.Data.Model.pdb
+C:\Users\ozgur\Desktop\Marduk\Marduk.Test.Model\obj\Debug\Arinna.Test.Model.csprojResolveAssemblyReference.cache
+C:\Users\ozgur\Desktop\Marduk\Marduk.Test.Model\obj\Debug\Marduk.Test.Model.dll
+C:\Users\ozgur\Desktop\Marduk\Marduk.Test.Model\obj\Debug\Marduk.Test.Model.pdb
+C:\Users\ozgur\Desktop\Arinna\Arinna.Test.Model\bin\Debug\Arinna.Test.Model.dll
+C:\Users\ozgur\Desktop\Arinna\Arinna.Test.Model\bin\Debug\Arinna.Test.Model.pdb
+C:\Users\ozgur\Desktop\Arinna\Arinna.Test.Model\bin\Debug\Arinna.Data.Model.dll
+C:\Users\ozgur\Desktop\Arinna\Arinna.Test.Model\bin\Debug\Arinna.Data.Model.pdb
+C:\Users\ozgur\Desktop\Arinna\Arinna.Test.Model\obj\Debug\Arinna.Test.Model.csprojResolveAssemblyReference.cache
+C:\Users\ozgur\Desktop\Arinna\Arinna.Test.Model\obj\Debug\Arinna.Test.Model.dll
+C:\Users\ozgur\Desktop\Arinna\Arinna.Test.Model\obj\Debug\Arinna.Test.Model.pdb

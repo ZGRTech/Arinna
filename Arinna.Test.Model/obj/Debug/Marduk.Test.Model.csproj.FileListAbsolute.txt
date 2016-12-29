@@ -1,0 +1,14 @@
+D:\Project\Marduk\Marduk.Test.Model\bin\Debug\Marduk.Test.Model.dll
+D:\Project\Marduk\Marduk.Test.Model\bin\Debug\Marduk.Test.Model.pdb
+D:\Project\Marduk\Marduk.Test.Model\bin\Debug\Marduk.Data.Model.dll
+D:\Project\Marduk\Marduk.Test.Model\bin\Debug\Marduk.Data.Model.pdb
+D:\Project\Marduk\Marduk.Test.Model\obj\Debug\Marduk.Test.Model.csprojResolveAssemblyReference.cache
+D:\Project\Marduk\Marduk.Test.Model\obj\Debug\Marduk.Test.Model.dll
+D:\Project\Marduk\Marduk.Test.Model\obj\Debug\Marduk.Test.Model.pdb
+C:\Users\ozgur\Desktop\Marduk\Marduk.Test.Model\bin\Debug\Marduk.Test.Model.dll
+C:\Users\ozgur\Desktop\Marduk\Marduk.Test.Model\bin\Debug\Marduk.Test.Model.pdb
+C:\Users\ozgur\Desktop\Marduk\Marduk.Test.Model\bin\Debug\Marduk.Data.Model.dll
+C:\Users\ozgur\Desktop\Marduk\Marduk.Test.Model\bin\Debug\Marduk.Data.Model.pdb
+C:\Users\ozgur\Desktop\Marduk\Marduk.Test.Model\obj\Debug\Marduk.Test.Model.csprojResolveAssemblyReference.cache
+C:\Users\ozgur\Desktop\Marduk\Marduk.Test.Model\obj\Debug\Marduk.Test.Model.dll
+C:\Users\ozgur\Desktop\Marduk\Marduk.Test.Model\obj\Debug\Marduk.Test.Model.pdb
