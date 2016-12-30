@@ -10,3 +10,9 @@ C:\Users\ozgur\Desktop\Arinna\Arinna.Data.Model\bin\Debug\Arinna.Data.Model.pdb
 C:\Users\ozgur\Desktop\Arinna\Arinna.Data.Model\obj\Debug\Arinna.Data.Model.csprojResolveAssemblyReference.cache
 C:\Users\ozgur\Desktop\Arinna\Arinna.Data.Model\obj\Debug\Arinna.Data.Model.dll
 C:\Users\ozgur\Desktop\Arinna\Arinna.Data.Model\obj\Debug\Arinna.Data.Model.pdb
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data.Model\bin\Debug\Arinna.Data.Model.dll.config
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data.Model\bin\Debug\Arinna.Data.Model.dll
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data.Model\bin\Debug\Arinna.Data.Model.pdb
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data.Model\obj\Debug\Arinna.Data.Model.csprojResolveAssemblyReference.cache
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data.Model\obj\Debug\Arinna.Data.Model.dll
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data.Model\obj\Debug\Arinna.Data.Model.pdb
