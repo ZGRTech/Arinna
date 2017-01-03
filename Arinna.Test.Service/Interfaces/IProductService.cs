@@ -25,6 +25,8 @@ namespace Arinna.Test.Service.Interfaces
         bool ProductAny();
         bool ProductAny(Expression<Func<Product, bool>> predicate);
 
+        List<Product> IncludeProductRange(IQueryable<Product> products, Expression<Func<Product, object>> path);
+
         void AddProduct(Product product);
         void AddProductRange(IEnumerable<Product> products);
 

@@ -27,10 +27,6 @@ namespace Arinna.Data.Repositories
             DbSet = context.Set<TEntity>();
         }
 
-
-        //Context.Database.DynamicSqlQuery
-        //Attach
-
         public TEntity Get(Expression<Func<TEntity, bool>> predicate)
         {
             return DbSet.AsNoTracking().Where(predicate).FirstOrDefault();
@@ -210,7 +206,6 @@ namespace Arinna.Data.Repositories
         {
             return sqlCommand.Parameters.Count == 0 ? Context.Database.SqlQuery<TDtoEntity>(sqlCommand.CommandText) : Context.Database.SqlQuery<TDtoEntity>(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters));
         }
-
 
         public async Task ExecuteSqlCommandAsync(string sql, params object[] parameters)
         {

@@ -132,6 +132,17 @@ namespace Arinna.Test.Tests
         }
 
         [TestMethod]
+        public void TestIncludeProduct()
+        {
+            var productService = new ProductService();
+            var datas = productService.GetAllProducts();
+            var datas2 = productService.IncludeProductRange(datas.AsQueryable(), x => x.Category);
+
+            Assert.IsNull(datas.First().Category);
+            Assert.IsNotNull(datas2.First().Category);
+        }
+
+        [TestMethod]
         public void TestAddProduct()
         {
             const string obj = "AddedProduct";

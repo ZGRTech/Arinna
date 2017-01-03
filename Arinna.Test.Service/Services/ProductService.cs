@@ -88,12 +88,12 @@ namespace Arinna.Test.Service.Services
             }
         }
 
-        public List<Product> IncludeProducts(IEnumerable<Product> products, Expression<Func<Product, object>> path)
+        public List<Product> IncludeProductRange(IQueryable<Product> products, Expression<Func<Product, object>> path)
         {
             using (var uof = new UnitOfWork(new ArinnaTestContext()))
             {
-                //Todo:devam et burdan IQueryable ve IEnumerable olayında sıkıntı var.
-                return uof.GetRepository<Product>().Include(products, path).ToList();
+                var data = uof.GetRepository<Product>().GetAll();
+                return uof.GetRepository<Product>().Include(data, path).ToList();
             }
         }
 
