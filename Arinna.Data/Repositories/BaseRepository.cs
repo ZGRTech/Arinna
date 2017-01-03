@@ -31,7 +31,6 @@ namespace Arinna.Data.Repositories
         //Context.Database.DynamicSqlQuery
         //Attach
 
-
         public TEntity Get(Expression<Func<TEntity, bool>> predicate)
         {
             return DbSet.AsNoTracking().Where(predicate).FirstOrDefault();
@@ -77,11 +76,15 @@ namespace Arinna.Data.Repositories
             return DbSet.AsNoTracking().Any(predicate);
         }
 
+        public IQueryable<TEntity> Include(IQueryable<TEntity> entities, Expression<Func<TEntity, object>> path)
+        {
+            return entities.Include(path);
+        }
+
         public void Add(TEntity entity)
         {
             SetEntityState(entity);
         }
-
 
         public void AddRange(IEnumerable<TEntity> entities)
         {
