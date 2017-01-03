@@ -34,3 +34,15 @@ D:\Project\Arinna\Arinna.Data\bin\Debug\EntityFramework.SqlServer.xml
 D:\Project\Arinna\Arinna.Data\obj\Debug\Arinna.Data.csprojResolveAssemblyReference.cache
 D:\Project\Arinna\Arinna.Data\obj\Debug\Arinna.Data.dll
 D:\Project\Arinna\Arinna.Data\obj\Debug\Arinna.Data.pdb
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data\bin\Debug\Arinna.Data.dll.config
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data\bin\Debug\Arinna.Data.dll
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data\bin\Debug\Arinna.Data.pdb
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data\bin\Debug\Arinna.Data.Model.dll
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data\bin\Debug\EntityFramework.dll
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data\bin\Debug\Arinna.Data.Model.pdb
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data\bin\Debug\EntityFramework.xml
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data\obj\Debug\Arinna.Data.csprojResolveAssemblyReference.cache
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data\obj\Debug\Arinna.Data.dll
+C:\Users\Özgür\Source\Repos\Arinna\Arinna.Data\obj\Debug\Arinna.Data.pdb
