@@ -39,31 +39,6 @@ namespace Arinna.Test.Service.Interfaces
         void RunCrudProductOperation(Product product);
         void RunCrudProductOperationRange(IEnumerable<Product> products);
 
-        Product GetProductAsync(Expression<Func<Product, bool>> predicates);
-        Product GetProductAsync(Expression<Func<Product, bool>> predicate, Expression<Func<Product, object>> path);
-
-        List<Product> GetAllProductsAsync();
-        List<Product> GetAllProductsAsync(Expression<Func<Product, bool>> predicate);
-        List<Product> GetAllProductsAsync(Expression<Func<Product, bool>> predicate, Expression<Func<Product, object>> path);
-
-        int ProductCountAsync();
-        int ProductCountAsync(Expression<Func<Product, bool>> predicate);
-
-        bool ProductAnyAsync();
-        bool ProductAnyAsync(Expression<Func<Product, bool>> predicate);
-
-        void AddProductAsync(Product product);
-        void AddProductRangeAsync(IEnumerable<Product> products);
-
-        void UpdateProductAsync(Product product);
-        void UpdateProductRangeAsync(IEnumerable<Product> products);
-
-        void RemoveProductAsync(Product product);
-        void RemoveProductRangeAsync(IEnumerable<Product> products);
-
-        void RunCrudProductOperationAsync(Product product);
-        void RunCrudProductOperationRangeAsync(IEnumerable<Product> products);
-
         void ExecuteProductSqlCommand(string sql, params object[] parameters);
         void ExecuteProductSqlCommand(IDbCommand sqlCommand);
 
@@ -72,16 +47,5 @@ namespace Arinna.Test.Service.Interfaces
 
         List<ProductDto> ExecuteProductDtoSqlQuery(string sql, params object[] parameters);
         List<ProductDto> ExecuteProductDtoSqlQuery(IDbCommand sqlCommand);
-
-        void ExecuteProductSqlCommandAsync(string sql, params object[] parameters);
-        void ExecuteProductSqlCommandAsync(IDbCommand sqlCommand);
-
-        List<Product> ExecuteProductSqlQueryAsync(string sql, params object[] parameters);
-        List<Product> ExecuteProductSqlQueryAsync(IDbCommand sqlCommand);
-
-        List<ProductDto> ExecuteProductDtoSqlQueryAsync(string sql, params object[] parameters);
-        List<ProductDto> ExecuteProductDtoSqlQueryAsync(IDbCommand sqlCommand);
-
-
     }
 }

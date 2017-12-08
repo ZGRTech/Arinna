@@ -34,30 +34,5 @@ namespace Arinna.Test.Service.Interfaces
 
         void RunCrudCategoryOperation(Category category);
         void RunCrudCategoryOperationRange(IEnumerable<Category> categories);
-
-        Category GetCategoryAsync(Expression<Func<Category, bool>> predicates);
-        Category GetCategoryAsync(Expression<Func<Category, bool>> predicate, Expression<Func<Category, object>> path);
-
-        List<Category> GetAllCategorysAsync();
-        List<Category> GetAllCategorysAsync(Expression<Func<Category, bool>> predicate);
-        List<Category> GetAllCategorysAsync(Expression<Func<Category, bool>> predicate, Expression<Func<Category, object>> path);
-
-        int CategoryCountAsync();
-        int CategoryCountAsync(Expression<Func<Category, bool>> predicate);
-
-        bool CategoryAnyAsync();
-        bool CategoryAnyAsync(Expression<Func<Category, bool>> predicate);
-
-        void AddCategoryAsync(Category category);
-        void AddCategoryAsync(IEnumerable<Category> categories);
-
-        void UpdateCategoryAsync(Category category);
-        void UpdateCategoryAsync(IEnumerable<Category> categories);
-
-        void RemoveCategoryAsync(Category category);
-        void RemoveCategoryAsync(IEnumerable<Category> categories);
-
-        void RunCrudCategoryOperationAsync(Category category);
-        void RunCrudCategoryOperationRangeAsync(IEnumerable<Category> categories);
     }
 }

@@ -39,19 +39,6 @@ namespace Arinna.Data.Interfaces
         void RunCrudOperation(TEntity entity);
         void RunCrudOperationRange(IEnumerable<TEntity> entities);
 
-        Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate);
-        Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate, Expression<Func<TEntity, object>> path);
-
-        Task<List<TEntity>> GetAllAsync();
-        Task<List<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate);
-        Task<List<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate, Expression<Func<TEntity, object>> path);
-
-        Task<int> CountAsync();
-        Task<int> CountAsync(Expression<Func<TEntity, bool>> predicate);
-
-        Task<bool> AnyAsync();
-        Task<bool> AnyAsync(Expression<Func<TEntity, bool>> predicate);
-
         void ExecuteSqlCommand(string sql, object[] parameters);
         void ExecuteSqlCommand(IDbCommand sqlCommand);
 
@@ -60,15 +47,5 @@ namespace Arinna.Data.Interfaces
 
         IEnumerable<TDtoEntity> ExecuteSqlQuery<TDtoEntity>(string sql,params object[] parameters) where TDtoEntity : class;
         IEnumerable<TDtoEntity> ExecuteSqlQuery<TDtoEntity>(IDbCommand sqlCommand) where TDtoEntity : class;
-
-        Task ExecuteSqlCommandAsync(string sql,params object[] parameters);
-        Task ExecuteSqlCommandAsync(IDbCommand sqlCommand);
-
-        Task<IEnumerable<TEntity>> ExecuteSqlQueryAsync(string sql,params object[] parameters);
-        Task<IEnumerable<TEntity>> ExecuteSqlQueryAsync(IDbCommand sqlCommand);
-
-        Task<IEnumerable<TDtoEntity>> ExecuteSqlQueryAsync<TDtoEntity>(string sql, params object[] parameters) where TDtoEntity : class;
-        Task<IEnumerable<TDtoEntity>> ExecuteSqlQueryAsync<TDtoEntity>(IDbCommand sqlCommand) where TDtoEntity : class;
-
     }
 }

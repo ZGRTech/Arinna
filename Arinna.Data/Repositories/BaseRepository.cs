@@ -129,53 +129,6 @@ namespace Arinna.Data.Repositories
             }
         }
 
-
-        public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate)
-        {
-            return await DbSet.AsNoTracking().Where(predicate).FirstOrDefaultAsync();
-        }
-
-        public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate, Expression<Func<TEntity, object>> path)
-        {
-            return await DbSet.AsNoTracking().Where(predicate).Include(path).FirstOrDefaultAsync();
-        }
-
-        public async Task<List<TEntity>> GetAllAsync()
-        {
-            return await DbSet.AsNoTracking().ToListAsync();
-        }
-
-        public async Task<List<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate)
-        {
-            return await DbSet.AsNoTracking().Where(predicate).ToListAsync();
-        }
-
-        public async Task<List<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate, Expression<Func<TEntity, object>> path)
-        {
-            return await DbSet.AsNoTracking().Where(predicate).Include(path).ToListAsync();
-        }
-
-        public async Task<int> CountAsync()
-        {
-            return await DbSet.AsNoTracking().CountAsync();
-        }
-
-        public async Task<int> CountAsync(Expression<Func<TEntity, bool>> predicate)
-        {
-            return await DbSet.AsNoTracking().CountAsync(predicate);
-        }
-
-        public async Task<bool> AnyAsync()
-        {
-            return await DbSet.AsNoTracking().AnyAsync();
-        }
-
-        public async Task<bool> AnyAsync(Expression<Func<TEntity, bool>> predicate)
-        {
-            return await DbSet.AsNoTracking().AnyAsync(predicate);
-        }
-
-
         public void ExecuteSqlCommand(string sql, object[] parameters)
         {
             Context.Database.ExecuteSqlCommand(sql, parameters);
@@ -206,37 +159,6 @@ namespace Arinna.Data.Repositories
         {
             return sqlCommand.Parameters.Count == 0 ? Context.Database.SqlQuery<TDtoEntity>(sqlCommand.CommandText) : Context.Database.SqlQuery<TDtoEntity>(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters));
         }
-
-        public async Task ExecuteSqlCommandAsync(string sql, params object[] parameters)
-        {
-            await Context.Database.ExecuteSqlCommandAsync(sql, parameters);
-        }
-
-        public async Task ExecuteSqlCommandAsync(IDbCommand sqlCommand)
-        {
-            await (sqlCommand.Parameters.Count == 0 ? Context.Database.ExecuteSqlCommandAsync(sqlCommand.CommandText) : Context.Database.ExecuteSqlCommandAsync(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters)));
-        }
-
-        public async Task<IEnumerable<TEntity>> ExecuteSqlQueryAsync(string sql, params object[] parameters)
-        {
-            return await Context.Database.SqlQuery<TEntity>(sql, parameters).ToListAsync();
-        }
-
-        public async Task<IEnumerable<TEntity>> ExecuteSqlQueryAsync(IDbCommand sqlCommand)
-        {
-            return await (sqlCommand.Parameters.Count == 0 ? Context.Database.SqlQuery<TEntity>(sqlCommand.CommandText).ToListAsync() : Context.Database.SqlQuery<TEntity>(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters)).ToListAsync());
-        }
-
-        public async Task<IEnumerable<TDtoEntity>> ExecuteSqlQueryAsync<TDtoEntity>(string sql, params object[] parameters) where TDtoEntity : class
-        {
-            return await Context.Database.SqlQuery<TDtoEntity>(sql, parameters).ToListAsync();
-        }
-
-        public async Task<IEnumerable<TDtoEntity>> ExecuteSqlQueryAsync<TDtoEntity>(IDbCommand sqlCommand) where TDtoEntity : class
-        {
-            return await (sqlCommand.Parameters.Count == 0 ? Context.Database.SqlQuery<TDtoEntity>(sqlCommand.CommandText).ToListAsync() : Context.Database.SqlQuery<TDtoEntity>(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters)).ToListAsync());
-        }
-
 
         private void SetEntityState(TEntity entity)
         {
