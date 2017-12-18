@@ -12,6 +12,7 @@ namespace Arinna.Data.Interfaces
 {
     public interface IRepository<TEntity> where TEntity : BaseModel
     {
+        TEntity Get();
         TEntity Get(Expression<Func<TEntity, bool>> predicate);
         TEntity Get(Expression<Func<TEntity, bool>> predicate, Expression<Func<TEntity, object>> path);
 
@@ -25,7 +26,7 @@ namespace Arinna.Data.Interfaces
         bool Any();
         bool Any(Expression<Func<TEntity, bool>> predicate);
 
-        IQueryable<TEntity> Include(IQueryable<TEntity> entities, Expression<Func<TEntity, object>> path);
+        //IQueryable<TEntity> Include(IQueryable<TEntity> entities, Expression<Func<TEntity, object>> path);
 
         void Add(TEntity entity);
         void AddRange(IEnumerable<TEntity> entities);

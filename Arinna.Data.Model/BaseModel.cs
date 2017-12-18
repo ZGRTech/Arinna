@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Arinna.Data.Model
 {
-    public abstract class BaseModel
+    public abstract class BaseModel : IBaseModel,IEntityObjectState
     {
         [NotMapped]
-        private ObjectState objectState = ObjectState.Unchanged;
+        private EntityObjectState objectState = EntityObjectState.Unchanged;
 
         [NotMapped]
-        public ObjectState ObjectState
+        public EntityObjectState ObjectState
         {
             get { return objectState; }
             set { objectState = value; }

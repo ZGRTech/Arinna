@@ -27,6 +27,11 @@ namespace Arinna.Data.Repositories
             DbSet = context.Set<TEntity>();
         }
 
+        public TEntity Get()
+        {
+            return DbSet.AsNoTracking().FirstOrDefault();
+        }
+
         public TEntity Get(Expression<Func<TEntity, bool>> predicate)
         {
             return DbSet.AsNoTracking().Where(predicate).FirstOrDefault();
@@ -72,10 +77,10 @@ namespace Arinna.Data.Repositories
             return DbSet.AsNoTracking().Any(predicate);
         }
 
-        public IQueryable<TEntity> Include(IQueryable<TEntity> entities, Expression<Func<TEntity, object>> path)
-        {
-            return entities.Include(path);
-        }
+        //public IQueryable<TEntity> Include(IQueryable<TEntity> entities, Expression<Func<TEntity, object>> path)
+        //{
+        //    return entities.Include(path);
+        //}
 
         public void Add(TEntity entity)
         {
@@ -165,18 +170,18 @@ namespace Arinna.Data.Repositories
             Context.Entry(entity).State = ChangeObjectStateToEntityState(entity.ObjectState);
         }
 
-        private EntityState ChangeObjectStateToEntityState(ObjectState objectState)
+        private EntityState ChangeObjectStateToEntityState(EntityObjectState objectState)
         {
             var entityState = EntityState.Unchanged;
             switch (objectState)
             {
-                case ObjectState.Added:
+                case EntityObjectState.Added:
                     entityState = EntityState.Added;
                     break;
-                case ObjectState.Modified:
+                case EntityObjectState.Modified:
                     entityState = EntityState.Modified;
                     break;
-                case ObjectState.Deleted:
+                case EntityObjectState.Deleted:
                     entityState = EntityState.Deleted;
                     break;
             }

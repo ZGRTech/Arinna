@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseModel.cs" />
+    <Compile Include="IBaseModel.cs" />
+    <Compile Include="IEntityObjectState.cs" />
     <Compile Include="ObjectState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
