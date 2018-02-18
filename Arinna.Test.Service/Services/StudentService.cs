@@ -17,7 +17,7 @@ using Arinna.Data.Services;
 
 namespace Arinna.Test.Service.Services
 {
-    public class StudentService : IStudentService
+    public class StudentService : IBaseService<Student>
     {
         public Student Get(Expression<Func<Student, bool>> predicate)
         {
@@ -123,5 +123,8 @@ namespace Arinna.Test.Service.Services
         {
             return new BaseService<Student>(new ArinnaTestContext()).ExecuteSqlQuery(sqlCommand);
         }
+
+
+
     }
 }

@@ -10,8 +10,8 @@ using System.Linq.Expressions;
 
 namespace Arinna.Test.Service.Interfaces
 {
-    public interface IStudentService : IBaseService<Student>
+    public interface IStudentRepository : IBaseRepository<Student>
     {
-
+        
     }
 }

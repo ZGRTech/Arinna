@@ -11,10 +11,10 @@ namespace Arinna.Data.Model.Models
     public abstract class BaseEntity<TIdType> : IBaseEntity, IEntity<TIdType>
     {
         [NotMapped]
-        private EntityObjectState objectState = EntityObjectState.Unchanged;
+        private ObjectState objectState = ObjectState.Unchanged;
 
         [NotMapped]
-        public EntityObjectState ObjectState
+        public ObjectState ObjectState
         {
             get { return objectState; }
             set { objectState = value; }

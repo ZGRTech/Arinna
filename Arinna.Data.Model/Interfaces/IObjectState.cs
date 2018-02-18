@@ -9,6 +9,6 @@ namespace Arinna.Data.Model.Interfaces
 {
     public interface IObjectState
     {
-        EntityObjectState ObjectState { get; set; }
+        ObjectState ObjectState { get; set; }
     }
 }

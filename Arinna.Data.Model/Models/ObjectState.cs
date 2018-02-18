@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Arinna.Data.Model.Models
 {
-    public enum EntityObjectState
+    public enum ObjectState
     {
         Unchanged,
         Added,
