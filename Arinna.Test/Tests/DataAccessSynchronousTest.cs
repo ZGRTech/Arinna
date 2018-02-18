@@ -39,7 +39,10 @@ namespace Arinna.Test.Tests
 
             Assert.IsNotNull(data);
             Assert.IsTrue(data.StudentName == expected);
-            //Assert.IsNull(data.);
+            //Assert.IsNull(data.);   
+
+
+
         }
 
         //[TestMethod]
