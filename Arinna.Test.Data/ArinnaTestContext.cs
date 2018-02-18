@@ -19,16 +19,11 @@ namespace Arinna.Test.Data
             this.Configuration.LazyLoadingEnabled = false;
         }
 
-<<<<<<< HEAD
         public DbSet<Student> Student { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
-=======
-        //public DbSet<Category> Categories { get; set; }
-        //public DbSet<Product> Products { get; set; }
->>>>>>> origin/master
     }
 }

@@ -8,11 +8,7 @@ using System.Threading.Tasks;
 
 namespace Arinna.Data.Model.Models
 {
-<<<<<<< HEAD:Arinna.Data.Model/Models/BaseEntity.cs
     public abstract class BaseEntity<TIdType> : IBaseEntity, IEntity<TIdType>
-=======
-    public abstract class BaseModel : IBaseModel,IEntityObjectState
->>>>>>> origin/master:Arinna.Data.Model/BaseModel.cs
     {
         [NotMapped]
         private EntityObjectState objectState = EntityObjectState.Unchanged;

@@ -90,11 +90,6 @@ namespace Arinna.Data.Repositories
             return DbSet.AsNoTracking().Any(predicate);
         }
 
-        //public IQueryable<TEntity> Include(IQueryable<TEntity> entities, Expression<Func<TEntity, object>> path)
-        //{
-        //    return entities.Include(path);
-        //}
-
         public void Add(TEntity entity)
         {
             SetEntityState(entity);

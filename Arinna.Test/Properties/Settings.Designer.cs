@@ -37,11 +37,7 @@ namespace Arinna.Test.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-<<<<<<< HEAD
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=ArinnaTestDb;Integrated Security=True")]
-=======
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=ArinnaTestDb;Integrated Security=True")]
->>>>>>> origin/master
         public string ArinnaTestDbConnectionString1 {
             get {
                 return ((string)(this["ArinnaTestDbConnectionString1"]));
