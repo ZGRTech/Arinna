@@ -35,7 +35,11 @@ namespace Arinna.Test.Tests
         //    const int expected = 1;
 
         //    var command = $"Insert into dbo.Products Values ('{obj}',1,1,null,null)";
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var dataCountBefore = productService.ProductCount(x => x.ProductName == obj);
         //    productService.ExecuteProductSqlCommand(command);
         //    var dataCountAfter = productService.ProductCount(x => x.ProductName == obj);
@@ -51,7 +55,11 @@ namespace Arinna.Test.Tests
         //    const int expected = 1;
 
         //    var command = $"Update dbo.Products Set ProductName = '{objTarget}' where ProductName=@productName";
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var dataCountBeforeSource = productService.ProductCount(x => x.ProductName == objSource);
         //    var dataCountBeforeTarget = productService.ProductCount(x => x.ProductName == objTarget);
         //    productService.ExecuteProductSqlCommand(command, new SqlParameter("@productName", objSource));
@@ -70,7 +78,11 @@ namespace Arinna.Test.Tests
         //    var command = $"Insert into dbo.Products Values ('{obj}',1,1,null,null)";
         //    var sqlCommand = new SqlCommand(command);
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var dataCountBefore = productService.ProductCount(x => x.ProductName == obj);
         //    productService.ExecuteProductSqlCommand(sqlCommand);
         //    var dataCountAfter = productService.ProductCount(x => x.ProductName == obj);
@@ -89,7 +101,11 @@ namespace Arinna.Test.Tests
         //    var sqlCommand = new SqlCommand(command);
         //    sqlCommand.Parameters.AddWithValue("@productName", objSource);
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var dataCountBeforeSource = productService.ProductCount(x => x.ProductName == objSource);
         //    var dataCountBeforeTarget = productService.ProductCount(x => x.ProductName == objTarget);
         //    productService.ExecuteProductSqlCommand(sqlCommand);
@@ -102,7 +118,11 @@ namespace Arinna.Test.Tests
         //[TestMethod]
         //public void TestExecuteProductSqlQueryWithCommandText()
         //{
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var datas = productService.ExecuteProductSqlQuery("select * from dbo.Products p");
 
         //    Assert.IsNotNull(datas);
@@ -112,7 +132,11 @@ namespace Arinna.Test.Tests
         //[TestMethod]
         //public void TestExecuteProductSqlQueryWithCommandTextAndPredicate()
         //{
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var datas = productService.ExecuteProductSqlQuery("select * from dbo.Products p where p.IsActive=@isActive", new SqlParameter("@isActive", true));
 
         //    Assert.IsNotNull(datas);
@@ -123,7 +147,11 @@ namespace Arinna.Test.Tests
         //[TestMethod]
         //public void TestExecuteProductSqlQueryWithSqlCommand()
         //{
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
 
         //    var sqlCommand = new SqlCommand("select * from dbo.Products p");
 
@@ -136,7 +164,11 @@ namespace Arinna.Test.Tests
         //[TestMethod]
         //public void TestExecuteProductSqlQueryWithSqlCommandAndPredicate()
         //{
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
 
         //    var sqlCommand = new SqlCommand("select * from dbo.Products p where p.IsActive=@isActive");
         //    sqlCommand.Parameters.AddWithValue("@isActive", true);
@@ -151,7 +183,11 @@ namespace Arinna.Test.Tests
         //[TestMethod]
         //public void TestExecuteProductDtoSqlQueryWithCommandText()
         //{
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var datas = productService.ExecuteProductDtoSqlQuery("select p.ProductId,p.ProductName,p.IsActive from dbo.Products p");
 
         //    Assert.IsNotNull(datas);
@@ -161,7 +197,11 @@ namespace Arinna.Test.Tests
         //[TestMethod]
         //public void TestExecuteProductDtoSqlQueryWithCommandTextAndPredicate()
         //{
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var datas = productService.ExecuteProductDtoSqlQuery("select p.ProductId,p.ProductName,p.IsActive from dbo.Products p where p.IsActive=@isActive", new SqlParameter("@isActive", true));
 
         //    Assert.IsNotNull(datas);
@@ -172,7 +212,11 @@ namespace Arinna.Test.Tests
         //[TestMethod]
         //public void TestExecuteProductDtoSqlQueryWithSqlCommand()
         //{
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
 
         //    var sqlCommand = new SqlCommand("select p.ProductId,p.ProductName,p.IsActive from dbo.Products p");
 
@@ -185,7 +229,11 @@ namespace Arinna.Test.Tests
         //[TestMethod]
         //public void TestExecuteProductDtoSqlQueryWithSqlCommandAndPredicate()
         //{
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
 
         //    var sqlCommand = new SqlCommand("select p.ProductId,p.ProductName,p.IsActive from dbo.Products p where p.IsActive=@isActive");
         //    sqlCommand.Parameters.AddWithValue("@isActive", true);

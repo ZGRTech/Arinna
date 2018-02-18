@@ -28,6 +28,7 @@ namespace Arinna.Test.Tests
             mySqlDatabase.PerformDbOperation(NDbUnit.Core.DbOperationFlag.CleanInsertIdentity);
         }
 
+<<<<<<< HEAD
         [TestMethod]
         public void Test_get_student_with_pradicate_return_filtered_student()
         {
@@ -41,6 +42,21 @@ namespace Arinna.Test.Tests
             Assert.IsTrue(data.StudentName == expected);
             //Assert.IsNull(data.);
         }
+=======
+        //[TestMethod]
+        //public void TestGetProductWithPredicate()
+        //{
+        //    const string obj = "Product1";
+        //    const string expected = "Product1";
+
+        //    var productService = new StudentService();
+        //    var data = productService.GetProduct(x => x.ProductName == obj);
+
+        //    Assert.IsNotNull(data);
+        //    Assert.IsTrue(data.ProductName == expected);
+        //    Assert.IsNull(data.Category);
+        //}
+>>>>>>> origin/master
 
         //[TestMethod]
         //public void TestGetProductWithPredicateAndPath()
@@ -48,7 +64,11 @@ namespace Arinna.Test.Tests
         //    const string obj = "Product1";
         //    const string expected = "Product1";
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var data = productService.GetProduct(x => x.ProductName == obj, x => x.Category);
 
         //    Assert.IsNotNull(data);
@@ -59,7 +79,11 @@ namespace Arinna.Test.Tests
         //[TestMethod]
         //public void TestGetAllProducts()
         //{
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var datas = productService.GetAllProducts();
 
         //    Assert.IsNotNull(datas);
@@ -70,7 +94,11 @@ namespace Arinna.Test.Tests
         //[TestMethod]
         //public void TestGetAllProductsWithPredicate()
         //{
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var datas = productService.GetAllProducts(x => x.IsActive);
 
         //    Assert.IsNotNull(datas);
@@ -82,7 +110,11 @@ namespace Arinna.Test.Tests
         //[TestMethod]
         //public void TestGetAllProductsWithPredicateAndPath()
         //{
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var datas = productService.GetAllProducts(x => x.IsActive, x => x.Category);
 
         //    Assert.IsNotNull(datas);
@@ -96,7 +128,11 @@ namespace Arinna.Test.Tests
         //{
         //    const int expected = 10;
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var data = productService.ProductCount();
 
         //    Assert.AreEqual(data, expected);
@@ -107,7 +143,11 @@ namespace Arinna.Test.Tests
         //{
         //    const int expected = 8;
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var data = productService.ProductCount(x => x.IsActive);
 
         //    Assert.AreEqual(data, expected);
@@ -116,7 +156,11 @@ namespace Arinna.Test.Tests
         //[TestMethod]
         //public void TestProductAny()
         //{
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var data = productService.ProductAny();
 
         //    Assert.IsTrue(data);
@@ -125,7 +169,11 @@ namespace Arinna.Test.Tests
         //[TestMethod]
         //public void TestProductAnyWithPredicate()
         //{
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var data = productService.ProductAny(x => x.IsActive);
 
         //    Assert.IsTrue(data);
@@ -134,7 +182,11 @@ namespace Arinna.Test.Tests
         //[TestMethod]
         //public void TestIncludeProduct()
         //{
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var datas = productService.GetAllProducts();
         //    var datas2 = productService.IncludeProductRange(datas.AsQueryable(), x => x.Category);
 
@@ -148,14 +200,22 @@ namespace Arinna.Test.Tests
         //    const string obj = "AddedProduct";
         //    const int expected = 1;
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var dataCountBefore = productService.ProductCount(x => x.ProductName == obj);
         //    productService.AddProduct(new Product
         //    {
         //        ProductName = obj,
         //        IsActive = true,
         //        CategoryId = 1,
+<<<<<<< HEAD
         //        ObjectState = ObjectState.Added
+=======
+        //        ObjectState = EntityObjectState.Added
+>>>>>>> origin/master
         //    });
         //    var dataCountAfter = productService.ProductCount(x => x.ProductName == obj);
 
@@ -168,7 +228,11 @@ namespace Arinna.Test.Tests
         //    const string obj = "AddedProductMulti";
         //    const int expected = 2;
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var dataCountBefore = productService.ProductCount(x => x.ProductName == obj);
         //    productService.AddProductRange(new List<Product> {
         //        new Product
@@ -176,14 +240,22 @@ namespace Arinna.Test.Tests
         //            ProductName = obj,
         //            IsActive = false,
         //            CategoryId = 1,
+<<<<<<< HEAD
         //            ObjectState = ObjectState.Added
+=======
+        //            ObjectState = EntityObjectState.Added
+>>>>>>> origin/master
         //        },
         //        new Product
         //        {
         //            ProductName = obj,
         //            IsActive = false,
         //            CategoryId = 1,
+<<<<<<< HEAD
         //            ObjectState = ObjectState.Added
+=======
+        //            ObjectState = EntityObjectState.Added
+>>>>>>> origin/master
         //        }
         //    });
         //    var dataCountAfter = productService.ProductCount(x => x.ProductName == obj);
@@ -198,12 +270,20 @@ namespace Arinna.Test.Tests
         //    const string objTarget = "UpdatedProduct";
         //    const int expected = 1;
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var dataCountBeforeSource = productService.ProductCount(x => x.ProductName == objSource);
         //    var dataCountBeforeTarget = productService.ProductCount(x => x.ProductName == objTarget);
         //    var data = productService.GetProduct(x => x.ProductName == objSource);
         //    data.ProductName = objTarget;
+<<<<<<< HEAD
         //    data.ObjectState = ObjectState.Modified;
+=======
+        //    data.ObjectState = EntityObjectState.Modified;
+>>>>>>> origin/master
         //    productService.UpdateProduct(data);
         //    var dataCountAfterSource = productService.ProductCount(x => x.ProductName == objSource);
         //    var dataCountAfterTarget = productService.ProductCount(x => x.ProductName == objTarget);
@@ -219,14 +299,22 @@ namespace Arinna.Test.Tests
         //    const string objTarget = "UpdatedProductMulti";
         //    const int expected = 2;
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var dataCountBeforeSource = productService.ProductCount(x => x.ProductName == objSource1 || x.ProductName == objSource2);
         //    var dataCountBeforeTarget = productService.ProductCount(x => x.ProductName == objTarget);
         //    var datas = productService.GetAllProducts(x => x.ProductName == objSource1 || x.ProductName == objSource2);
         //    datas.ForEach(x =>
         //    {
         //        x.ProductName = objTarget;
+<<<<<<< HEAD
         //        x.ObjectState = ObjectState.Modified;
+=======
+        //        x.ObjectState = EntityObjectState.Modified;
+>>>>>>> origin/master
         //    });
         //    productService.UpdateProductRange(datas);
         //    var dataCountAfterSource = productService.ProductCount(x => x.ProductName == objSource1 || x.ProductName == objSource2);
@@ -241,10 +329,17 @@ namespace Arinna.Test.Tests
         //    const string obj = "Product4";
         //    const int expected = 1;
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
         //    var dataBefore = productService.ProductCount(x => x.ProductName == obj);
         //    var data = productService.GetProduct(x => x.ProductName == obj);
         //    data.ObjectState = ObjectState.Deleted;
+=======
+        //    var productService = new StudentService();
+        //    var dataBefore = productService.ProductCount(x => x.ProductName == obj);
+        //    var data = productService.GetProduct(x => x.ProductName == obj);
+        //    data.ObjectState = EntityObjectState.Deleted;
+>>>>>>> origin/master
         //    productService.RemoveProduct(data);
         //    var dataAfter = productService.ProductCount(x => x.ProductName == obj);
 
@@ -258,10 +353,17 @@ namespace Arinna.Test.Tests
         //    const string obj2 = "Product6";
         //    const int expected = 2;
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
         //    var dataCountBefore = productService.ProductCount(x => x.ProductName == obj1 || x.ProductName == obj2);
         //    var datas = productService.GetAllProducts(x => x.ProductName == obj1 || x.ProductName == obj2);
         //    datas.ForEach(x => x.ObjectState = ObjectState.Deleted);
+=======
+        //    var productService = new StudentService();
+        //    var dataCountBefore = productService.ProductCount(x => x.ProductName == obj1 || x.ProductName == obj2);
+        //    var datas = productService.GetAllProducts(x => x.ProductName == obj1 || x.ProductName == obj2);
+        //    datas.ForEach(x => x.ObjectState = EntityObjectState.Deleted);
+>>>>>>> origin/master
         //    productService.RemoveProductRange(datas);
         //    var dataCountAfter = productService.ProductCount(x => x.ProductName == obj1 || x.ProductName == obj2);
 
@@ -274,14 +376,22 @@ namespace Arinna.Test.Tests
         //    const string obj = "AddedProductWithRunCrud";
         //    const int expected = 1;
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var dataCountBefore = productService.ProductCount(x => x.ProductName == obj);
         //    productService.RunCrudProductOperation(new Product
         //    {
         //        ProductName = obj,
         //        IsActive = true,
         //        CategoryId = 1,
+<<<<<<< HEAD
         //        ObjectState = ObjectState.Added
+=======
+        //        ObjectState = EntityObjectState.Added
+>>>>>>> origin/master
         //    });
         //    var dataCountAfter = productService.ProductCount(x => x.ProductName == obj);
 
@@ -295,12 +405,20 @@ namespace Arinna.Test.Tests
         //    const string objTarget = "UpdatedProductWithRunCrud";
         //    const int expected = 1;
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var dataCountBeforeSource = productService.ProductCount(x => x.ProductName == objSource);
         //    var dataCountBeforeTarget = productService.ProductCount(x => x.ProductName == objTarget);
         //    var data = productService.GetProduct(x => x.ProductName == objSource);
         //    data.ProductName = objTarget;
+<<<<<<< HEAD
         //    data.ObjectState = ObjectState.Modified;
+=======
+        //    data.ObjectState = EntityObjectState.Modified;
+>>>>>>> origin/master
         //    productService.RunCrudProductOperation(data);
         //    var dataCountAfterSource = productService.ProductCount(x => x.ProductName == objSource);
         //    var dataCountAfterTarget = productService.ProductCount(x => x.ProductName == objTarget);
@@ -314,10 +432,17 @@ namespace Arinna.Test.Tests
         //    const string obj = "Product8";
         //    const int expected = 1;
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
         //    var dataCountBefore = productService.ProductCount(x => x.ProductName == obj);
         //    var data = productService.GetProduct(x => x.ProductName == obj);
         //    data.ObjectState = ObjectState.Deleted;
+=======
+        //    var productService = new StudentService();
+        //    var dataCountBefore = productService.ProductCount(x => x.ProductName == obj);
+        //    var data = productService.GetProduct(x => x.ProductName == obj);
+        //    data.ObjectState = EntityObjectState.Deleted;
+>>>>>>> origin/master
         //    productService.RunCrudProductOperation(data);
         //    var dataCountAfter = productService.ProductCount(x => x.ProductName == obj);
 
@@ -335,7 +460,11 @@ namespace Arinna.Test.Tests
         //    const int expected2 = 1;
         //    const int expected3 = 1;
 
+<<<<<<< HEAD
         //    var productService = new ProductService();
+=======
+        //    var productService = new StudentService();
+>>>>>>> origin/master
         //    var dataList = new List<Product>();
 
         //    var dataCount1Before = productService.ProductCount(x => x.ProductName == objTarget1);
@@ -344,19 +473,31 @@ namespace Arinna.Test.Tests
         //        ProductName = objTarget1,
         //        IsActive = true,
         //        CategoryId = 1,
+<<<<<<< HEAD
         //        ObjectState = ObjectState.Added
+=======
+        //        ObjectState = EntityObjectState.Added
+>>>>>>> origin/master
         //    });
 
         //    var dataCount2BeforeSource = productService.ProductCount(x => x.ProductName == objSource2);
         //    var dataCount2BeforeTarget = productService.ProductCount(x => x.ProductName == objTarget2);
         //    var data2 = productService.GetProduct(x => x.ProductName == objSource2);
         //    data2.ProductName = objTarget2;
+<<<<<<< HEAD
         //    data2.ObjectState = ObjectState.Modified;
+=======
+        //    data2.ObjectState = EntityObjectState.Modified;
+>>>>>>> origin/master
         //    dataList.Add(data2);
 
         //    var dataCount3Before = productService.ProductCount(x => x.ProductName == objSource3);
         //    var data3 = productService.GetProduct(x => x.ProductName == objSource3);
+<<<<<<< HEAD
         //    data3.ObjectState = ObjectState.Deleted;
+=======
+        //    data3.ObjectState = EntityObjectState.Deleted;
+>>>>>>> origin/master
         //    dataList.Add(data3);
 
         //    productService.RunCrudProductOperationRange(dataList);

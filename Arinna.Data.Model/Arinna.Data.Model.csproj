@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Interfaces\IEntity.cs" />
     <Compile Include="Models\AuditableEntity.cs" />
     <Compile Include="Models\AuditableSoftDeletableEntity.cs" />
@@ -59,6 +60,12 @@
     <Compile Include="Interfaces\ISoftDeletableEntity.cs" />
     <Compile Include="Models\ObjectState.cs" />
     <Compile Include="Models\SoftDeletableEntity.cs" />
+=======
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="IBaseModel.cs" />
+    <Compile Include="IEntityObjectState.cs" />
+    <Compile Include="ObjectState.cs" />
+>>>>>>> origin/master
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
