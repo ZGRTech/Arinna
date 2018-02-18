@@ -10,6 +10,6 @@ namespace Arinna.Data.Interfaces
     {
         int Complete();
 
-        Task<int> CompleteAsync();
+        //Task<int> CompleteAsync();
     }
 }

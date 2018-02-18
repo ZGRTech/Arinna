@@ -71,11 +71,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DummyData\DummyDataSchema.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DummyDataSchema.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -104,16 +99,10 @@
     <Content Include="DummyData\DummyDataSource.xml">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="DummyData\DummyDataSchema.xsc">
-      <DependentUpon>DummyDataSchema.xsd</DependentUpon>
-    </None>
     <None Include="DummyData\DummyDataSchema.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DummyDataSchema.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DummyData\DummyDataSchema.xss">
-      <DependentUpon>DummyDataSchema.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

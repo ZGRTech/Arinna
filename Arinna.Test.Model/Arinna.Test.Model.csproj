@@ -49,9 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.cs" />
-    <Compile Include="Product.cs" />
-    <Compile Include="ProductDto.cs" />
+    <Compile Include="Entities\Course.cs" />
+    <Compile Include="Entities\CourseBook.cs" />
+    <Compile Include="Entities\Student.cs" />
+    <Compile Include="Entities\StudentDetail.cs" />
+    <Compile Include="Entities\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +65,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dto\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

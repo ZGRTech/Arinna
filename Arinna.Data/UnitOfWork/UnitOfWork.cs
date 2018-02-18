@@ -1,5 +1,6 @@
 ﻿using Arinna.Data.Interfaces;
 using Arinna.Data.Model;
+using Arinna.Data.Model.Interfaces;
 using Arinna.Data.Repositories;
 using System;
 using System.Collections.Generic;
@@ -12,13 +13,13 @@ namespace Arinna.Data.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly DbContext Context;
+        private readonly DbContext _context;
 
         public UnitOfWork(DbContext context)
         {
             if (context == null)
                 throw new ArgumentNullException("Context can not be null.");
-            Context = context;
+            _context = context;
 
             // Buradan istediğiniz gibi EntityFramework'ü konfigure edebilirsiniz.
             //_dbContext.Configuration.LazyLoadingEnabled = false;
@@ -26,20 +27,20 @@ namespace Arinna.Data.UnitOfWork
             //_dbContext.Configuration.ProxyCreationEnabled = false;
         }
 
-        public IRepository<TEntity> GetRepository<TEntity>() where TEntity : BaseModel
+        public IBaseRepository<TEntity> GetRepository<TEntity>() where TEntity : class, IBaseEntity, new()
         {
-            return new BaseRepository<TEntity>(Context);
+            return new BaseRepository<TEntity>(_context);
         }
 
         public int Complete()
         {
-            return Context.SaveChanges();
+            return _context.SaveChanges();
         }
 
-        public async Task<int> CompleteAsync()
-        {
-            return await Context.SaveChangesAsync();
-        }
+        //public async Task<int> CompleteAsync()
+        //{
+        //    return await _context.SaveChangesAsync();
+        //}
 
         private bool disposed = false;
         protected virtual void Dispose(bool disposing)
@@ -48,7 +49,7 @@ namespace Arinna.Data.UnitOfWork
             {
                 if (disposing)
                 {
-                    Context.Dispose();
+                    _context.Dispose();
                 }
             }
 

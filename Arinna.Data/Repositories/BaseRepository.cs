@@ -11,30 +11,43 @@ using System.Linq.Expressions;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
+using Arinna.Data.Model.Interfaces;
+using Arinna.Data.Model.Models;
 
 namespace Arinna.Data.Repositories
 {
-    public class BaseRepository<TEntity> : IRepository<TEntity> where TEntity : BaseModel
+    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class, IBaseEntity, new()
     {
-        protected readonly DbContext Context;
-        protected readonly DbSet<TEntity> DbSet;
+        private readonly DbContext _context;
+        private IDbSet<TEntity> _dbSet;
+
+        protected virtual IDbSet<TEntity> DbSet
+        {
+            get
+            {
+                if (_dbSet == null)
+                {
+                    _dbSet = _context.Set<TEntity>();
+                }
+                return _dbSet;
+            }
+        }
 
         public BaseRepository(DbContext context)
         {
             if (context == null)
                 throw new ArgumentNullException("Context can not be null.");
-            Context = context;
-            DbSet = context.Set<TEntity>();
+            _context = context;
         }
 
         public TEntity Get(Expression<Func<TEntity, bool>> predicate)
         {
-            return DbSet.AsNoTracking().Where(predicate).FirstOrDefault();
+            return DbSet.AsNoTracking().Where(predicate).SingleOrDefault();
         }
 
         public TEntity Get(Expression<Func<TEntity, bool>> predicate, Expression<Func<TEntity, object>> path)
         {
-            return DbSet.AsNoTracking().Where(predicate).Include(path).FirstOrDefault();
+            return DbSet.AsNoTracking().Where(predicate).Include(path).SingleOrDefault();
         }
 
         public IQueryable<TEntity> GetAll()
@@ -131,43 +144,43 @@ namespace Arinna.Data.Repositories
 
         public void ExecuteSqlCommand(string sql, object[] parameters)
         {
-            Context.Database.ExecuteSqlCommand(sql, parameters);
+            _context.Database.ExecuteSqlCommand(sql, parameters);
         }
 
         public void ExecuteSqlCommand(IDbCommand sqlCommand)
         {
-            var ret = sqlCommand.Parameters.Count == 0 ? Context.Database.ExecuteSqlCommand(sqlCommand.CommandText) : Context.Database.ExecuteSqlCommand(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters));
+            var ret = sqlCommand.Parameters.Count == 0 ? _context.Database.ExecuteSqlCommand(sqlCommand.CommandText) : _context.Database.ExecuteSqlCommand(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters));
         }
 
         public IEnumerable<TEntity> ExecuteSqlQuery(string sql, params object[] parameters)
         {
-            return Context.Database.SqlQuery<TEntity>(sql, parameters);
+            return _context.Database.SqlQuery<TEntity>(sql, parameters);
         }
 
         public IEnumerable<TEntity> ExecuteSqlQuery(IDbCommand sqlCommand)
         {
-            return sqlCommand.Parameters.Count == 0 ? Context.Database.SqlQuery<TEntity>(sqlCommand.CommandText) : Context.Database.SqlQuery<TEntity>(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters));
+            return sqlCommand.Parameters.Count == 0 ? _context.Database.SqlQuery<TEntity>(sqlCommand.CommandText) : _context.Database.SqlQuery<TEntity>(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters));
 
         }
 
-        public IEnumerable<TDtoEntity> ExecuteSqlQuery<TDtoEntity>(string sql, params object[] parameters) where TDtoEntity : class
+        public IEnumerable<TDtoEntity> ExecuteSqlQuery<TDtoEntity>(string sql, params object[] parameters) where TDtoEntity : class, new()
         {
-            return Context.Database.SqlQuery<TDtoEntity>(sql, parameters);
+            return _context.Database.SqlQuery<TDtoEntity>(sql, parameters);
         }
 
-        public IEnumerable<TDtoEntity> ExecuteSqlQuery<TDtoEntity>(IDbCommand sqlCommand) where TDtoEntity : class
+        public IEnumerable<TDtoEntity> ExecuteSqlQuery<TDtoEntity>(IDbCommand sqlCommand) where TDtoEntity : class, new()
         {
-            return sqlCommand.Parameters.Count == 0 ? Context.Database.SqlQuery<TDtoEntity>(sqlCommand.CommandText) : Context.Database.SqlQuery<TDtoEntity>(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters));
+            return sqlCommand.Parameters.Count == 0 ? _context.Database.SqlQuery<TDtoEntity>(sqlCommand.CommandText) : _context.Database.SqlQuery<TDtoEntity>(sqlCommand.CommandText, ConvertDataParameterCollectionToArray(sqlCommand.Parameters));
         }
 
         private void SetEntityState(TEntity entity)
         {
-            Context.Entry(entity).State = ChangeObjectStateToEntityState(entity.ObjectState);
+            _context.Entry(entity).State = ChangeObjectStateToEntityState(entity.ObjectState);
         }
 
         private EntityState ChangeObjectStateToEntityState(ObjectState objectState)
         {
-            var entityState = EntityState.Unchanged;
+            EntityState entityState;
             switch (objectState)
             {
                 case ObjectState.Added:
@@ -178,6 +191,9 @@ namespace Arinna.Data.Repositories
                     break;
                 case ObjectState.Deleted:
                     entityState = EntityState.Deleted;
+                    break;
+                default:
+                    entityState = EntityState.Unchanged;
                     break;
             }
             return entityState;
