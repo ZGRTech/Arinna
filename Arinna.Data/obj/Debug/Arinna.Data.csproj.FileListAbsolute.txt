@@ -1,0 +1,12 @@
+D:\Project\Github\Arinna\Arinna.Data\bin\Debug\Arinna.Data.dll.config
+D:\Project\Github\Arinna\Arinna.Data\bin\Debug\Arinna.Data.dll
+D:\Project\Github\Arinna\Arinna.Data\bin\Debug\Arinna.Data.pdb
+D:\Project\Github\Arinna\Arinna.Data\bin\Debug\Arinna.Data.Model.dll
+D:\Project\Github\Arinna\Arinna.Data\bin\Debug\EntityFramework.dll
+D:\Project\Github\Arinna\Arinna.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\Github\Arinna\Arinna.Data\bin\Debug\Arinna.Data.Model.pdb
+D:\Project\Github\Arinna\Arinna.Data\bin\Debug\EntityFramework.xml
+D:\Project\Github\Arinna\Arinna.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\Github\Arinna\Arinna.Data\obj\Debug\Arinna.Data.csprojResolveAssemblyReference.cache
+D:\Project\Github\Arinna\Arinna.Data\obj\Debug\Arinna.Data.dll
+D:\Project\Github\Arinna\Arinna.Data\obj\Debug\Arinna.Data.pdb

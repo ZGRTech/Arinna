@@ -1,0 +1,9 @@
+D:\Project\Github\Arinna\Arinna.Data.Model\bin\Debug\Arinna.Data.Model.dll.config
+D:\Project\Github\Arinna\Arinna.Data.Model\bin\Debug\Arinna.Data.Model.dll
+D:\Project\Github\Arinna\Arinna.Data.Model\bin\Debug\Arinna.Data.Model.pdb
+D:\Project\Github\Arinna\Arinna.Data.Model\bin\Debug\EntityFramework.dll
+D:\Project\Github\Arinna\Arinna.Data.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\Github\Arinna\Arinna.Data.Model\bin\Debug\EntityFramework.xml
+D:\Project\Github\Arinna\Arinna.Data.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\Github\Arinna\Arinna.Data.Model\obj\Debug\Arinna.Data.Model.dll
+D:\Project\Github\Arinna\Arinna.Data.Model\obj\Debug\Arinna.Data.Model.pdb
