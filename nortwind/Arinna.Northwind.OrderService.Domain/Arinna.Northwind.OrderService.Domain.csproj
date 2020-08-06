@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Arinna.Data\Arinna.Data.csproj" />
+    <ProjectReference Include="..\..\src\Arinna.DDD.Domain\Arinna.DDD.Domain.csproj" />
   </ItemGroup>
 
 </Project>
