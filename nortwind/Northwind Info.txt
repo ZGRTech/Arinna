@@ -1,0 +1,29 @@
+Northwind
+
+	CustomerService
+		Structure: Domain-Driven Design
+		DependencyInjection: 
+		ORM: NHibernate
+		Database:
+		Logging:
+
+	EmployeeService
+		Structure: N-Tier
+		DependencyInjection: 
+		ORM: Dapper
+		Database:
+		Logging:
+
+	OrderService
+		Structure: Domain-Driven Design
+		DependencyInjection: 
+		ORM: EntityFramework
+		Database: Microsoft SQL Server
+		Logging:
+
+	ProductService
+		Structure: N-Tier
+		DependencyInjection: Microsoft
+		ORM: EntityFramework
+		Database: Microsoft SQL Server
+		Logging:

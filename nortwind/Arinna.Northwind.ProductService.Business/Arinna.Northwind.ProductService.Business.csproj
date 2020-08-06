@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Arinna.Northwind.ProductService.Business.Contract\Arinna.Northwind.ProductService.Business.Contract.csproj" />
+    <ProjectReference Include="..\Arinna.Northwind.ProductService.Business.Entity\Arinna.Northwind.ProductService.Business.Entity.csproj" />
+    <ProjectReference Include="..\Arinna.Northwind.ProductService.Data\Arinna.Northwind.ProductService.Data.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Arinna.Data.EntityFramework\Arinna.Data.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\src\Arinna.Data\Arinna.Data.csproj" />
+  </ItemGroup>
+
+</Project>
