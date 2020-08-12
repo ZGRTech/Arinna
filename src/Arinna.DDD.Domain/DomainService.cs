@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Arinna.Data
+namespace Arinna.DDD.Domain
 {
-    public interface IEntity<T>
+    public abstract class DomainService
     {
-        T Id { get; set; }
     }
 }

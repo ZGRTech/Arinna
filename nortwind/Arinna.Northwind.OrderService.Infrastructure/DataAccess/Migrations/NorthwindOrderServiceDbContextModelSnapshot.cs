@@ -19,7 +19,7 @@ namespace Arinna.Northwind.OrderService.Infrastructure.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Arinna.Northwind.OrderService.Infrastructure.DataAccess.Entity.Order", b =>
+            modelBuilder.Entity("Arinna.Northwind.OrderService.Domain.Aggregate.OrderAggregate.Order", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,33 +45,6 @@ namespace Arinna.Northwind.OrderService.Infrastructure.DataAccess.Migrations
                     b.Property<DateTime?>("RequiredDate")
                         .HasColumnType("datetime");
 
-                    b.Property<string>("ShipAddress")
-                        .HasColumnType("nvarchar(60)")
-                        .HasMaxLength(60);
-
-                    b.Property<string>("ShipCity")
-                        .HasColumnType("nvarchar(15)")
-                        .HasMaxLength(15);
-
-                    b.Property<string>("ShipCountry")
-                        .HasColumnType("nvarchar(15)")
-                        .HasMaxLength(15);
-
-                    b.Property<string>("ShipName")
-                        .HasColumnType("nvarchar(40)")
-                        .HasMaxLength(40);
-
-                    b.Property<string>("ShipPostalCode")
-                        .HasColumnType("nvarchar(10)")
-                        .HasMaxLength(10);
-
-                    b.Property<string>("ShipRegion")
-                        .HasColumnType("nvarchar(15)")
-                        .HasMaxLength(15);
-
-                    b.Property<int?>("ShipVia")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("ShippedDate")
                         .HasColumnType("datetime");
 
@@ -80,12 +53,10 @@ namespace Arinna.Northwind.OrderService.Infrastructure.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ShipperId");
-
                     b.ToTable("Order","Test");
                 });
 
-            modelBuilder.Entity("Arinna.Northwind.OrderService.Infrastructure.DataAccess.Entity.OrderDetail", b =>
+            modelBuilder.Entity("Arinna.Northwind.OrderService.Domain.Aggregate.OrderAggregate.OrderDetail", b =>
                 {
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
@@ -109,7 +80,7 @@ namespace Arinna.Northwind.OrderService.Infrastructure.DataAccess.Migrations
                     b.ToTable("OrderDetail","Test");
                 });
 
-            modelBuilder.Entity("Arinna.Northwind.OrderService.Infrastructure.DataAccess.Entity.Shipper", b =>
+            modelBuilder.Entity("Arinna.Northwind.OrderService.Domain.Aggregate.ShipperAggregate.Shipper", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -121,6 +92,9 @@ namespace Arinna.Northwind.OrderService.Infrastructure.DataAccess.Migrations
                         .HasColumnType("nvarchar(40)")
                         .HasMaxLength(40);
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(24)")
                         .HasMaxLength(24);
@@ -130,16 +104,57 @@ namespace Arinna.Northwind.OrderService.Infrastructure.DataAccess.Migrations
                     b.ToTable("Shipper","Test");
                 });
 
-            modelBuilder.Entity("Arinna.Northwind.OrderService.Infrastructure.DataAccess.Entity.Order", b =>
+            modelBuilder.Entity("Arinna.Northwind.OrderService.Domain.Aggregate.OrderAggregate.Order", b =>
                 {
-                    b.HasOne("Arinna.Northwind.OrderService.Infrastructure.DataAccess.Entity.Shipper", "Shipper")
-                        .WithMany("OrderList")
-                        .HasForeignKey("ShipperId");
+                    b.OwnsOne("Arinna.Northwind.OrderService.Domain.Aggregate.OrderAggregate.OrderShipDetail", "OrderShipDetail", b1 =>
+                        {
+                            b1.Property<int>("OrderId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int")
+                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                            b1.Property<string>("ShipAddress")
+                                .HasColumnName("ShipAddress")
+                                .HasColumnType("nvarchar(60)")
+                                .HasMaxLength(60);
+
+                            b1.Property<string>("ShipCity")
+                                .HasColumnName("ShipCity")
+                                .HasColumnType("nvarchar(15)")
+                                .HasMaxLength(15);
+
+                            b1.Property<string>("ShipCountry")
+                                .HasColumnName("ShipCountry")
+                                .HasColumnType("nvarchar(15)")
+                                .HasMaxLength(15);
+
+                            b1.Property<string>("ShipName")
+                                .HasColumnName("ShipName")
+                                .HasColumnType("nvarchar(40)")
+                                .HasMaxLength(40);
+
+                            b1.Property<string>("ShipPostalCode")
+                                .HasColumnName("ShipPostalCode")
+                                .HasColumnType("nvarchar(10)")
+                                .HasMaxLength(10);
+
+                            b1.Property<string>("ShipRegion")
+                                .HasColumnName("ShipRegion")
+                                .HasColumnType("nvarchar(15)")
+                                .HasMaxLength(15);
+
+                            b1.HasKey("OrderId");
+
+                            b1.ToTable("Order");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OrderId");
+                        });
                 });
 
-            modelBuilder.Entity("Arinna.Northwind.OrderService.Infrastructure.DataAccess.Entity.OrderDetail", b =>
+            modelBuilder.Entity("Arinna.Northwind.OrderService.Domain.Aggregate.OrderAggregate.OrderDetail", b =>
                 {
-                    b.HasOne("Arinna.Northwind.OrderService.Infrastructure.DataAccess.Entity.Order", "Order")
+                    b.HasOne("Arinna.Northwind.OrderService.Domain.Aggregate.OrderAggregate.Order", null)
                         .WithMany("OrderDetailList")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)

@@ -92,7 +92,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arinna.EventBus.ApacheKafka
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arinna.EventBus.RabbitMQ.Test", "tests\Arinna.EventBus.RabbitMQ.Test\Arinna.EventBus.RabbitMQ.Test.csproj", "{B163A995-472F-48A1-919D-EF90E8FFD14B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arinna.DDD.Domain", "src\Arinna.DDD.Domain\Arinna.DDD.Domain.csproj", "{C4F21E1A-AA7D-4D3E-8F92-9484EAB1341B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arinna.DDD.Domain", "src\Arinna.DDD.Domain\Arinna.DDD.Domain.csproj", "{C4F21E1A-AA7D-4D3E-8F92-9484EAB1341B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arinna.Northwind.CustomerService.Application.Contract", "nortwind\Arinna.Northwind.CustomerService.Application.Contract\Arinna.Northwind.CustomerService.Application.Contract.csproj", "{0BE52502-745C-444A-A243-E4C7D319036B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arinna.DDD.Application", "src\Arinna.DDD.Application\Arinna.DDD.Application.csproj", "{FBECF053-F618-456C-904F-C4B0695E20C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arinna.Service", "src\Arinna.Service\Arinna.Service.csproj", "{15BADBB1-7192-48BC-A04B-DFAF64EA3977}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -248,6 +254,18 @@ Global
 		{C4F21E1A-AA7D-4D3E-8F92-9484EAB1341B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4F21E1A-AA7D-4D3E-8F92-9484EAB1341B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4F21E1A-AA7D-4D3E-8F92-9484EAB1341B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BE52502-745C-444A-A243-E4C7D319036B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BE52502-745C-444A-A243-E4C7D319036B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BE52502-745C-444A-A243-E4C7D319036B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BE52502-745C-444A-A243-E4C7D319036B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBECF053-F618-456C-904F-C4B0695E20C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBECF053-F618-456C-904F-C4B0695E20C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBECF053-F618-456C-904F-C4B0695E20C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBECF053-F618-456C-904F-C4B0695E20C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15BADBB1-7192-48BC-A04B-DFAF64EA3977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15BADBB1-7192-48BC-A04B-DFAF64EA3977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15BADBB1-7192-48BC-A04B-DFAF64EA3977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15BADBB1-7192-48BC-A04B-DFAF64EA3977}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -294,6 +312,9 @@ Global
 		{BFB357BE-0C96-4B48-901C-191CEC95771B} = {209B2CC9-6A27-46B4-A537-EA3C83A6DFED}
 		{B163A995-472F-48A1-919D-EF90E8FFD14B} = {209B2CC9-6A27-46B4-A537-EA3C83A6DFED}
 		{C4F21E1A-AA7D-4D3E-8F92-9484EAB1341B} = {9D064A4C-5576-44F3-B57C-AC4F69EDDF93}
+		{0BE52502-745C-444A-A243-E4C7D319036B} = {55922A80-57F5-4050-82B4-9CEECD7F0D3B}
+		{FBECF053-F618-456C-904F-C4B0695E20C7} = {9D064A4C-5576-44F3-B57C-AC4F69EDDF93}
+		{15BADBB1-7192-48BC-A04B-DFAF64EA3977} = {9D064A4C-5576-44F3-B57C-AC4F69EDDF93}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6B4A5510-CF12-471A-A843-B624B89E71EC}

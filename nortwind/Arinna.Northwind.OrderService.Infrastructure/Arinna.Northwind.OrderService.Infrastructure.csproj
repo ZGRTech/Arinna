@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DataAccess\Repository\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.6">
@@ -19,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Arinna.Data.EntityFramework\Arinna.Data.EntityFramework.csproj" />
+    <ProjectReference Include="..\Arinna.Northwind.OrderService.Domain\Arinna.Northwind.OrderService.Domain.csproj" />
   </ItemGroup>
 
 </Project>

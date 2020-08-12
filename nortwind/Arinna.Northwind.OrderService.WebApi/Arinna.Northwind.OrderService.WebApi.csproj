@@ -5,18 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Arinna.Northwind.OrderService.Application\Arinna.Northwind.OrderService.Application.csproj" />
+    <ProjectReference Include="..\Arinna.Northwind.OrderService.Infrastructure\Arinna.Northwind.OrderService.Infrastructure.csproj" />
   </ItemGroup>
 
 

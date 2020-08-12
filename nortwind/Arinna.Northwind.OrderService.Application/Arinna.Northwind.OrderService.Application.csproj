@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Arinna.DDD.Application\Arinna.DDD.Application.csproj" />
     <ProjectReference Include="..\Arinna.Northwind.OrderService.Domain\Arinna.Northwind.OrderService.Domain.csproj" />
     <ProjectReference Include="..\Arinna.Northwind.OrderService.Infrastructure\Arinna.Northwind.OrderService.Infrastructure.csproj" />
   </ItemGroup>

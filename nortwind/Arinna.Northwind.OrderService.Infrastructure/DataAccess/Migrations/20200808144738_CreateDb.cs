@@ -11,21 +11,6 @@ namespace Arinna.Northwind.OrderService.Infrastructure.DataAccess.Migrations
                 name: "Test");
 
             migrationBuilder.CreateTable(
-                name: "Shipper",
-                schema: "Test",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CompanyName = table.Column<string>(maxLength: 40, nullable: false),
-                    Phone = table.Column<string>(maxLength: 24, nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Shipper", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Order",
                 schema: "Test",
                 columns: table => new
@@ -37,26 +22,34 @@ namespace Arinna.Northwind.OrderService.Infrastructure.DataAccess.Migrations
                     OrderDate = table.Column<DateTime>(type: "datetime", nullable: true),
                     RequiredDate = table.Column<DateTime>(type: "datetime", nullable: true),
                     ShippedDate = table.Column<DateTime>(type: "datetime", nullable: true),
-                    ShipVia = table.Column<int>(nullable: true),
+                    ShipperId = table.Column<int>(nullable: true),
                     Freight = table.Column<decimal>(type: "money", nullable: true, defaultValueSql: "((0))"),
                     ShipName = table.Column<string>(maxLength: 40, nullable: true),
                     ShipAddress = table.Column<string>(maxLength: 60, nullable: true),
                     ShipCity = table.Column<string>(maxLength: 15, nullable: true),
                     ShipRegion = table.Column<string>(maxLength: 15, nullable: true),
                     ShipPostalCode = table.Column<string>(maxLength: 10, nullable: true),
-                    ShipCountry = table.Column<string>(maxLength: 15, nullable: true),
-                    ShipperId = table.Column<int>(nullable: true)
+                    ShipCountry = table.Column<string>(maxLength: 15, nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Order", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Order_Shipper_ShipperId",
-                        column: x => x.ShipperId,
-                        principalSchema: "Test",
-                        principalTable: "Shipper",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Shipper",
+                schema: "Test",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CompanyName = table.Column<string>(maxLength: 40, nullable: false),
+                    Phone = table.Column<string>(maxLength: 24, nullable: true),
+                    IsDeleted = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Shipper", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -81,12 +74,6 @@ namespace Arinna.Northwind.OrderService.Infrastructure.DataAccess.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Order_ShipperId",
-                schema: "Test",
-                table: "Order",
-                column: "ShipperId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -96,11 +83,11 @@ namespace Arinna.Northwind.OrderService.Infrastructure.DataAccess.Migrations
                 schema: "Test");
 
             migrationBuilder.DropTable(
-                name: "Order",
+                name: "Shipper",
                 schema: "Test");
 
             migrationBuilder.DropTable(
-                name: "Shipper",
+                name: "Order",
                 schema: "Test");
         }
     }

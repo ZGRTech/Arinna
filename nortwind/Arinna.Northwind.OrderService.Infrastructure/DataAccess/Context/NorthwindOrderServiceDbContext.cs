@@ -33,7 +33,7 @@ namespace Arinna.Northwind.OrderService.Infrastructure.DataAccess.Context
             var assemblies = AppDomain.CurrentDomain.GetAssemblies();
             foreach (var assembly in assemblies)
             {
-                modelBuilder.AllEntitiesFromAssembly(assembly, "Arinna.Northwind.OrderService.Infrastructure.DataAccess.Entity");
+                modelBuilder.AllEntitiesFromAssembly(assembly, "Arinna.Northwind.OrderService.Domain.Aggregate");
                 modelBuilder.ApplyAllConfigurationsFromAssembly(assembly, "Arinna.Northwind.OrderService.Infrastructure.DataAccess.Configuration");
             }
         }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Arinna.Data
 {
-    public abstract class Entity<T> : BaseEntity, IEntity<T>
+    public abstract class Entity<T> : BaseEntity
     {
         [Key]
         public virtual T Id { get; set; }

@@ -1,5 +1,5 @@
 ﻿using Arinna.Data.EntityFramework;
-using Arinna.Northwind.OrderService.Infrastructure.DataAccess.Entity;
+using Arinna.Northwind.OrderService.Domain.Aggregate.OrderAggregate;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -20,12 +20,12 @@ namespace Arinna.Northwind.OrderService.Infrastructure.DataAccess.Configuration
             builder.Property(x => x.Freight).HasColumnType("money").HasDefaultValueSql("((0))");
             builder.Property(x => x.OrderDate).HasColumnType("datetime");
             builder.Property(x => x.RequiredDate).HasColumnType("datetime");
-            builder.Property(x => x.ShipAddress).HasMaxLength(60);
-            builder.Property(x => x.ShipCity).HasMaxLength(15);
-            builder.Property(x => x.ShipCountry).HasMaxLength(15);
-            builder.Property(x => x.ShipName).HasMaxLength(40);
-            builder.Property(x => x.ShipPostalCode).HasMaxLength(10);
-            builder.Property(x => x.ShipRegion).HasMaxLength(15);
+            builder.OwnsOne(x => x.OrderShipDetail).Property(x => x.ShipAddress).HasMaxLength(60).HasColumnName(nameof(OrderShipDetail.ShipAddress));
+            builder.OwnsOne(x => x.OrderShipDetail).Property(x => x.ShipCity).HasMaxLength(15).HasColumnName(nameof(OrderShipDetail.ShipCity));
+            builder.OwnsOne(x => x.OrderShipDetail).Property(x => x.ShipCountry).HasMaxLength(15).HasColumnName(nameof(OrderShipDetail.ShipCountry));
+            builder.OwnsOne(x => x.OrderShipDetail).Property(x => x.ShipName).HasMaxLength(40).HasColumnName(nameof(OrderShipDetail.ShipName));
+            builder.OwnsOne(x => x.OrderShipDetail).Property(x => x.ShipPostalCode).HasMaxLength(10).HasColumnName(nameof(OrderShipDetail.ShipPostalCode));
+            builder.OwnsOne(x => x.OrderShipDetail).Property(x => x.ShipRegion).HasMaxLength(15).HasColumnName(nameof(OrderShipDetail.ShipRegion));
             builder.Property(x => x.ShippedDate).HasColumnType("datetime");
         }
     }

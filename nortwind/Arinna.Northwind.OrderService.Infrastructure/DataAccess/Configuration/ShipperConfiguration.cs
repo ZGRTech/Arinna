@@ -1,5 +1,5 @@
 ﻿using Arinna.Data.EntityFramework;
-using Arinna.Northwind.OrderService.Infrastructure.DataAccess.Entity;
+using Arinna.Northwind.OrderService.Domain.Aggregate.ShipperAggregate;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
